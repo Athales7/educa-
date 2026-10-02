@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veja os materiais escolares disponíveis para doação perto de você.">
+    <title>Ver Doações - Instituto Despertar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="EducaCompartilha - início">
+            Instituto Despertar
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <nav class="nav-links" aria-label="Navegação principal">
+            <a href="index.html">Sobre</a>
+            <a href="doacoes.html" aria-current="page">Ver Doações</a>
+            <a href="cadastro.html" class="btn-nav">Quero Doar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mural-header">
+            <h1>Itens Disponíveis</h1>
+            <p>Materiais oferecidos por pessoas da sua região. Escolha um item e chame quem doou pelo WhatsApp.</p>
+        </section>
+
+        <section class="mural-board" id="mural" aria-labelledby="mural-title">
+            <h2 class="sr-only" id="mural-title">Mural de doações</h2>
+
+            <div class="filtros">
+                <label for="filtro-bairro">Bairro</label>
+                <select id="filtro-bairro">
+                    <option value="">Todos os bairros</option>
+                    <option value="centro">Centro</option>
+                    <option value="vila-nova">Vila Nova</option>
+                </select>
+
+                <label for="busca-item" class="sr-only">Buscar item</label>
+                <input type="search" id="busca-item" placeholder="Buscar por item, ex: mochila, caderno...">
+            </div>
+
+            <div class="grid-itens">
+                <article class="card" data-bairro="centro">
+                   <img alt="Mochila de Rodinhas Escolar 14&quot; Princesa Disney Cinderella Azul com Estampa" id="dimg_1Pi8aqOpBquC5OUPmN7EgQ4_281" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyTjQhATGSoAajMLHgFfVtyBb-elIQ62pmgemQUQFXA&amp;s=10" data-csiid="1Pi8aqOpBquC5OUPmN7EgQ4_166" data-atf="4" data-deferred="3" data-iml="1790769378544">
+                    <span class="badge">Disponível</span>
+                    <h3>Mochila de Rodinhas Azul</h3>
+                    <p><strong>Estado:</strong> Muito bom</p>
+                    <p><strong>Bairro:</strong> Centro</p>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn-wpp">
+                        Quero esta doação
+                    </a>
+                </article>
+
+                <article class="card" data-bairro="vila-nova">
+                    <img src="https://m.media-amazon.com/images/I/61QuY1ogULL._AC_UF894,1000_QL80_.jpg" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 200px; --xGflle: 1.0323325635103926;" alt="Estojo de Lápis Grande Capacidade Caixa de Lápis Papelaria Bolso com Zíper  para Escola Armazenamento Doméstico Bolso Multicamadas Organizador de ..." jsname="kn3ccd">
+                    <span class="badge">Disponível</span>
+                    <h3>Kit de Lápis e Estojo</h3>
+                    <p><strong>Estado:</strong> Novo (lacrado)</p>
+                    <p><strong>Bairro:</strong> Vila Nova</p>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn-wpp">
+                        Quero esta doação
+                    </a>
+                </article>
+
+                <article class="card" data-bairro="centro">
+                    <img src="https://pnld.ftd.com.br/wp-content/uploads/2024/08/pnld-2024-objeto-1-obra-didatica-ciencias-vida-e-universo.webp" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 200px; --xGflle: 1;" alt="PNLD Ciências, Vida e Universo Objeto 1 | FTD" jsname="kn3ccd">
+                    <span class="badge reservado">Reservado</span>
+                    <h3>Coleção de Livros Didáticos - 6º ano</h3>
+                    <p><strong>Estado:</strong> Bom, com anotações a lápis</p>
+                    <p><strong>Bairro:</strong> Centro</p>
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn-wpp">
+                        Quero esta doação
+                    </a>
+                </article>
+            </div>
+
+            <p class="mural-vazio">Nenhum item encontrado com esse filtro. Tente outro termo ou bairro.</p>
+        </section>
+
+        <section class="cta-final">
+            <h2>Não encontrou o que precisa?</h2>
+            <p>Novos itens chegam toda semana. Volte em breve ou cadastre um pedido conosco.</p>
+            <a href="cadastro.html" class="btn-primary">Cadastrar uma Doação</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Instituto Despertar. Um projeto social local. · <a href="index.html">Sobre o projeto</a></p>
+    </footer>
+</body>
+</html>

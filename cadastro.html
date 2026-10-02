@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre uma doação de material escolar em menos de dois minutos e ajude uma família da sua região.">
+    <title>Quero Doar — EducaCompartilha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="EducaCompartilha - início">
+            ✏️ EducaCompartilha
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <nav class="nav-links" aria-label="Navegação principal">
+            <a href="index.html">Sobre</a>
+            <a href="doacoes.html">Ver Doações</a>
+            <a href="cadastro.html" class="btn-nav" aria-current="page">Quero Doar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Publicar uma doação</h1>
+            <p>Preencha os campos abaixo. Seu contato só aparece para quem tocar em "Chamar no WhatsApp".</p>
+        </section>
+
+        <div class="form-wrap">
+            <div class="caderno-page">
+                <div class="form-conteudo">
+                    <form id="form-doacao" novalidate>
+                        <fieldset>
+                            <legend>O item</legend>
+
+                            <div class="campo">
+                                <label for="nome-item">Nome do item</label>
+                                <input type="text" id="nome-item" name="nome-item" required placeholder="Ex.: Mochila escolar juvenil">
+                                <p class="aviso-erro">Conte o nome do item que você quer doar.</p>
+                            </div>
+
+                            <div class="campo">
+                                <label>Categoria</label>
+                                <div class="categorias">
+                                    <input type="checkbox" id="cat-mochilas" name="categoria" value="mochilas">
+                                    <label for="cat-mochilas">🎒 Mochilas</label>
+
+                                    <input type="checkbox" id="cat-livros" name="categoria" value="livros">
+                                    <label for="cat-livros">📚 Livros e cadernos</label>
+
+                                    <input type="checkbox" id="cat-uniformes" name="categoria" value="uniformes">
+                                    <label for="cat-uniformes">👕 Uniformes</label>
+
+                                    <input type="checkbox" id="cat-material" name="categoria" value="material">
+                                    <label for="cat-material">✏️ Material de estojo</label>
+                                </div>
+                                <p class="aviso-erro" id="aviso-categorias">Escolha ao menos uma categoria.</p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="estado-item">Estado de conservação</label>
+                                <select id="estado-item" name="estado-item" required>
+                                    <option value="">Selecione</option>
+                                    <option value="novo">Novo</option>
+                                    <option value="seminovo">Seminovo</option>
+                                    <option value="bom">Bom estado, com uso</option>
+                                </select>
+                                <p class="aviso-erro">Selecione o estado do item.</p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="descricao">Descrição</label>
+                                <textarea id="descricao" name="descricao" required placeholder="Cor, tamanho, marca, algum detalhe que ajude quem for buscar"></textarea>
+                                <p class="aviso-erro">Escreva uma breve descrição do item.</p>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Seus dados</legend>
+
+                            <div class="campo">
+                                <label for="nome-doador">Seu nome</label>
+                                <input type="text" id="nome-doador" name="nome-doador" required>
+                                <p class="aviso-erro">Diga como podemos te chamar.</p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" id="bairro" name="bairro" required placeholder="Ex.: Lagoa Nova">
+                                <p class="aviso-erro">Informe seu bairro.</p>
+                            </div>
+
+                            <div class="campo">
+                                <label for="whatsapp">WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(84) 99999-9999">
+                                <p class="dica">Usado só para quem se interessar entrar em contato com você.</p>
+                                <p class="aviso-erro">Informe um número de WhatsApp para contato.</p>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Publicar doação</button>
+                            <span class="dica">Sua doação aparece no mural em poucos minutos.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="confirmacao">
+                    <div class="selo-ok" aria-hidden="true">✅</div>
+                    <h2>Doação publicada!</h2>
+                    <p>Obrigado por ajudar. Seu item já está no mural — famílias da sua região poderão te chamar no WhatsApp.</p>
+                    <a href="doacoes.html" class="btn-primary">Ver mural de doações</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EducaCompartilha. Um projeto social local. · <a href="doacoes.html">Ver doações</a></p>
+    </footer>
+</body>
+</html>
